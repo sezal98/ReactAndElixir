@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+# Ignore all node modules
+node_modules/
+pkg/
+target/
+dist/
+dist-ssr/
+*.local
+
+# Rust-specific
+**/Cargo.lock
+**/target/
+wasm/pkg/
+wasm/pkg/*
+
+# WebAssembly artifacts
+*.wasm
+
+# Editor settings
+.vscode/
+.vs/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build cache
+.cache/
+
