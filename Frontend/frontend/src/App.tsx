@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TabOne from './Tab1/TabOne';
 import TabTwo from './Tab2/TabTwo';
 
