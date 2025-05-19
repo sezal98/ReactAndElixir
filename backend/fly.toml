@@ -1,0 +1,19 @@
+app = "invideoaibackend"
+
+[build]
+  dockerfile = "../Dockerfile" # adjust if using a custom Dockerfile in root or backend
+
+[env]
+  PORT = "4000"
+
+[[services]]
+  internal_port = 4000
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
