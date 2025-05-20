@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const TabTwo: React.FC = () => {
+  const API_BASE = import.meta.env.VITE_API_URL;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [description, setDescription] = useState('');
   const [shaderCode, setShaderCode] = useState<string | null>(null);
@@ -17,7 +18,7 @@ const TabTwo: React.FC = () => {
     setShaderCode(null);
 
     try {
-      const response = await fetch('http://localhost:4000/api/shader', {
+      const response = await fetch(`${API_BASE}/api/shader`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

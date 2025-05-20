@@ -1,10 +1,13 @@
 app = "invideoaifrontend"
 
 [build]
-  builder = "heroku/buildpacks:20"
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
 
 [[services]]
-  internal_port = 8080
+  internal_port = 3000
   protocol = "tcp"
 
   [[services.ports]]
@@ -14,7 +17,3 @@ app = "invideoaifrontend"
   [[services.ports]]
     port = 443
     handlers = ["tls", "http"]
-
-[[statics]]
-  guest_path = "/app/dist"
-  url_prefix = "/"

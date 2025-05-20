@@ -1,0 +1,9 @@
+# Prevent huge slow builds
+node_modules
+dist
+wasm/pkg
+.git
+.vscode
+Dockerfile
+fly.toml
+.env
